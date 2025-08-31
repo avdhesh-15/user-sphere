@@ -55,7 +55,7 @@ const Dashboard: React.FC = () => {
                 </button>
             </div>
             <div className='w-full grid lg:grid-cols-3 grid-cols-3 space-y-3 space-x-8'>
-                <div className='border border-gray-200 rounded-xl p-5 bg-white flex flex-col gap-y-5'>
+                <div className='border border-gray-200 rounded-xl p-5  flex flex-col gap-y-5'>
                     <p className='font-medium'>Total Users</p>
                     <div className='flex flex-col gap-2'>
                         {
@@ -70,7 +70,7 @@ const Dashboard: React.FC = () => {
                         <p className='text-xs text-green-400 bg-green-200 w-fit p-1 px-3 rounded-xl'>+100%</p>
                     </div>
                 </div>
-                <div className='border border-gray-200 rounded-xl p-5 bg-white flex flex-col gap-y-5'>
+                <div className='border border-gray-200 rounded-xl p-5  flex flex-col gap-y-5'>
                     <p className='font-medium'>New Users</p>
                     <div className='flex flex-col gap-2'>
                         {
@@ -86,7 +86,7 @@ const Dashboard: React.FC = () => {
 
                     </div>
                 </div>
-                <div className='border border-gray-200 rounded-xl p-5 bg-white flex flex-col gap-y-5'>
+                <div className='border border-gray-200 rounded-xl p-5  flex flex-col gap-y-5'>
                     <p className='font-medium'>Active Users</p>
                     <div className='flex flex-col gap-2'>
                         {
