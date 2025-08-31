@@ -1,69 +1,47 @@
-# React + TypeScript + Vite
+# React + Vite + Tailwind CRUD App  
+This is a simple **CRUD (Create, Read, Update, Delete)** application built with **React, Vite, and Tailwind CSS**.  
+The app uses the free public API [Reqres](https://reqres.in/) to demonstrate user data management and API interaction.  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Features  
+- **Fetch Users** – Retrieve and display user data from Reqres API  
+- **Create User** – Add a new user via API  
+- **Update User** – Edit existing user details  
+- **Delete User** – Remove a user from the list  
+- **Responsive UI** – Styled with Tailwind CSS  
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack  
+- ⚛️ **React** – Frontend library for building UI  
+- ⚡ **Vite** – Fast build tool for modern web projects  
+- 🎨 **Tailwind CSS** – Utility-first CSS framework  
+- 🌐 **Reqres API** – Mock API for testing CRUD operations  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Project Setup  
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repository  
+```bash
+git clone https://github.com/avdhesh-15/user-sphere.git
+cd react-vite-crud
+```
+### 2. Install Dependencies
+``` bash 
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Run development server
+``` bash 
+npm run dev 
 ```
+
+### 4. Endpoint Reference 
+```bash 
+GET https://reqres.in/api/users
+POST https://reqres.in/api/users
+PUT https://reqres.in/api/users/:id
+DELETE https://reqres.in/api/users/:id
+```
+
+### 5. Headers
+```bash
+Use x-api-key: Your api key 
+```
+
