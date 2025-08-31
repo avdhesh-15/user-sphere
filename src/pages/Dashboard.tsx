@@ -4,6 +4,8 @@ import { BackwardIcon, ForwardIcon } from "@heroicons/react/16/solid";
 import React, { useEffect, useState } from 'react'
 import type { User } from '../utils/User'
 import { CgSpinner } from 'react-icons/cg';
+import { BsMoon, BsSun } from "react-icons/bs"
+import { useTheme } from '../context/ThemeContext';
 
 
 const Dashboard: React.FC = () => {
@@ -11,6 +13,7 @@ const Dashboard: React.FC = () => {
     const [page, setPage] = useState<number>(1)
     const [totalPages, setTotalPages] = useState<number>(1)
     const [isLoading, setIsLoading] = useState<boolean>(false)
+    const { theme, toggleTheme } = useTheme();
     const limit = 4
     useEffect(() => {
         const fetchUsers = async () => {
@@ -45,6 +48,11 @@ const Dashboard: React.FC = () => {
         <div className='h-full w-11/12 flex flex-col gap-y-10 max-w-8xl '>
             <div className="flex items-center justify-between px-4">
                 <p className='text-2xl font-medium'>Dashboard</p>
+                <button className="border-2 border-gray-200 p-4 rounded-lg cursor-pointer" onClick={toggleTheme}>
+                    {
+                        theme === 'light' ? (<BsMoon className="w-5 h-5 "></BsMoon>):( <BsSun className="w-5 h-5"></BsSun>)
+                    }
+                </button>
             </div>
             <div className='w-full grid lg:grid-cols-3 grid-cols-3 space-y-3 space-x-8'>
                 <div className='border border-gray-200 rounded-xl p-5 bg-white flex flex-col gap-y-5'>

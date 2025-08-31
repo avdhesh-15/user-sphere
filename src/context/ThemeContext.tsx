@@ -10,7 +10,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
     if (theme === "dark") {
@@ -21,12 +21,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prev) => {
-    const next = prev === "light" ? "dark" : "light";
-    console.log("Switching to theme:", next);
-    return next;
-  });
-    
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   return (
